@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidera Tecnologia — Software para gestão de empresas</title>
+<meta name="description" content="Sidera Tecnologia Ltda, empresa de desenvolvimento de software em João Pessoa (PB), criadora do Collabore, portal corporativo para equipes e atendimento a clientes.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --noite:#0F1A3A; --noite-2:#0A132C; --cobalto:#2F5BEA; --cobalto-esc:#2348C4; --cobalto-claro:#7894FF;
+    --ambar:#FFB020; --fundo:#F4F6FB; --sup:#FFFFFF; --linha:#DFE4F0; --txt:#10182F; --txt-2:#3C4764; --txt-3:#606B89;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--txt);background:var(--fundo);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--cobalto-esc)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  h1,h2,h3,.marca{font-family:'Plus Jakarta Sans','Inter',sans-serif;letter-spacing:-0.02em}
+
+  header{background:var(--noite);color:#fff}
+  .topo{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .marca{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:#fff;text-decoration:none}
+  .marca svg{width:30px;height:30px}
+  .marca span{color:var(--cobalto-claro);font-weight:700}
+  nav a{color:#C9D3F0;text-decoration:none;font-size:14px;margin-left:22px}
+  nav a:hover{color:#fff}
+
+  .hero{padding-top:72px;padding-bottom:88px}
+  .hero h1{font-size:clamp(32px,5vw,50px);line-height:1.12;font-weight:800;max-width:760px}
+  .hero h1 em{font-style:normal;color:var(--cobalto-claro)}
+  .hero p{color:#C9D3F0;font-size:18px;max-width:640px;margin-top:20px}
+  .botoes{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none}
+  .btn-1{background:var(--ambar);color:#1A1405}
+  .btn-2{border:1px solid #3A4A7A;color:#fff}
+
+  section{padding:72px 0}
+  .rotulo{font-size:13px;font-weight:600;color:var(--cobalto-esc);text-transform:uppercase;letter-spacing:.08em}
+  h2{font-size:clamp(26px,3.6vw,34px);font-weight:800;margin-top:8px;max-width:720px;line-height:1.2}
+  .lead{color:var(--txt-2);font-size:17px;max-width:720px;margin-top:14px}
+
+  .grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:36px}
+  .card{background:var(--sup);border:1px solid var(--linha);border-radius:14px;padding:22px}
+  .card h3{font-size:17px;font-weight:700;margin-bottom:6px}
+  .card p{color:var(--txt-2);font-size:15px}
+  .ico{width:38px;height:38px;border-radius:10px;background:#EDF2FF;display:grid;place-items:center;margin-bottom:14px}
+  .ico svg{width:20px;height:20px;stroke:var(--cobalto);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+  .produto{background:var(--sup);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+  .produto-cab{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .produto-cab svg{height:30px;width:auto}
+  .selo{font-size:12px;font-weight:600;background:#FFF4DC;color:#8F5400;padding:4px 10px;border-radius:999px}
+
+  .contato{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:32px}
+  .contato .card strong{display:block;font-size:13px;color:var(--txt-3);font-weight:500;margin-bottom:4px}
+  .contato .card div{font-size:16px;font-weight:500}
+
+  footer{background:var(--noite-2);color:#A7B4D8;font-size:14px;padding:36px 0}
+  footer .linhas{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer strong{color:#fff;font-weight:600}
+  footer p{margin-top:4px}
+
+  @media (max-width:640px){
+    nav{display:none}
+    .hero{padding-top:48px;padding-bottom:64px}
+    section{padding:52px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topo">
+    <a class="marca" href="#" aria-label="Sidera Tecnologia">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 L28.2 19.8 L42 24 L28.2 28.2 L24 42 L19.8 28.2 L6 24 L19.8 19.8 Z" fill="#7894FF"/><circle cx="37" cy="11" r="3.4" fill="#FFB020"/></svg>
+      Sidera <span>Tecnologia</span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#empresa">A empresa</a>
+      <a href="#collabore">Collabore</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+
+  <div class="wrap hero">
+    <h1>Software que organiza o trabalho e <em>aproxima a empresa</em> dos seus clientes.</h1>
+    <p>A Sidera Tecnologia desenvolve sistemas de gestão para empresas brasileiras — da rotina interna da equipe ao atendimento por WhatsApp e Instagram.</p>
+    <div class="botoes">
+      <a class="btn btn-1" href="#collabore">Conheça o Collabore</a>
+      <a class="btn btn-2" href="mailto:admin@sideratecnologia.com.br">Fale conosco</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="empresa">
+    <div class="wrap">
+      <div class="rotulo">A empresa</div>
+      <h2>Tecnologia feita na Paraíba, para o dia a dia das empresas.</h2>
+      <p class="lead">Somos uma empresa de João Pessoa (PB) dedicada ao desenvolvimento e licenciamento de software, à consultoria em tecnologia da informação e ao suporte técnico. Criamos ferramentas simples, seguras e em português, pensadas para quem precisa de resultado sem complicação.</p>
+
+      <div class="grade">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+          <h3>Desenvolvimento de software</h3>
+          <p>Programas próprios e sob encomenda, com licenciamento para empresas.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Consultoria em TI</h3>
+          <p>Diagnóstico de processos e escolha das ferramentas certas para cada negócio.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></div>
+          <h3>Suporte e manutenção</h3>
+          <p>Acompanhamento contínuo, com segurança e privacidade dos dados como prioridade.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 012-2h12v18H6a2 2 0 01-2-2zM8 7h6M8 11h6"/></svg></div>
+          <h3>Treinamento</h3>
+          <p>Capacitação das equipes para tirar o máximo de cada sistema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="collabore" class="produto">
+    <div class="wrap">
+      <div class="rotulo">Nosso produto</div>
+      <div class="produto-cab" style="margin-top:10px">
+        <svg viewBox="7.40 7.00 52 34" aria-label="Collabore" role="img"><path d="M31.86 13.35 A13 13 0 1 0 31.86 34.65" fill="none" stroke="#2F5BEA" stroke-width="8" stroke-linecap="round"/><circle cx="36.4" cy="24" r="4.3" fill="#FFB020"/></svg>
+        <h2 style="margin-top:0">Collabore — portal corporativo</h2>
+        <span class="selo">Em uso por empresas do grupo</span>
+      </div>
+      <p class="lead">O Collabore reúne num só lugar o que a empresa usa todos os dias: a comunicação da equipe, as tarefas e o atendimento aos clientes.</p>
+
+      <div class="grade">
+        <div class="card">
+          <h3>Tarefas e projetos</h3>
+          <p>Prazos, responsáveis, checklists e lembretes para a equipe inteira.</p>
+        </div>
+        <div class="card">
+          <h3>Comunicação interna</h3>
+          <p>Feed de notícias com confirmação de leitura e mensagens entre colaboradores.</p>
+        </div>
+        <div class="card">
+          <h3>Atendimento por WhatsApp e Instagram</h3>
+          <p>As conversas dos clientes chegam ao portal e são distribuídas entre os atendentes, pela API oficial da Meta.</p>
+        </div>
+        <div class="card">
+          <h3>CRM e relatórios</h3>
+          <p>Funil de vendas, atividades com aviso e indicadores de atendimento por canal e por atendente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap">
+      <div class="rotulo">Contato</div>
+      <h2>Fale com a Sidera.</h2>
+      <div class="contato">
+        <div class="card">
+          <strong>E-mail</strong>
+          <div><a href="mailto:admin@sideratecnologia.com.br">admin@sideratecnologia.com.br</a></div>
+        </div>
+        <div class="card">
+          <strong>Endereço</strong>
+          <div>Rua Antônio Rabelo Júnior, 161, Sala 2001<br>Miramar — João Pessoa/PB<br>CEP 58032-090</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap linhas">
+    <div>
+      <strong>SIDERA TECNOLOGIA LTDA</strong>
+      <p>CNPJ 68.064.742/0001-14</p>
+      <p>Rua Antônio Rabelo Júnior, 161, Sala 2001 · Miramar · João Pessoa/PB · CEP 58032-090</p>
+    </div>
+    <div>
+      <p>© 2026 Sidera Tecnologia. Todos os direitos reservados.</p>
+      <p><a href="mailto:admin@sideratecnologia.com.br" style="color:#C9D3F0">admin@sideratecnologia.com.br</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
